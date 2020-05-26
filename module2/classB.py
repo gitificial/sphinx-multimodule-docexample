@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 class classB(object):
     def __init__(self, a, b):
         self.a = a
