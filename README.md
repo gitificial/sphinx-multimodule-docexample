@@ -30,5 +30,40 @@ mv ./module1/module1.rst ./source
 mv ./module2/module2.rst ./source
 ```
 
+To include the modules in the build process add the rst-filenames to the master document index.rst:
 
+```bash
+...
 
+.. toctree::
+   :maxdepth: 2
+   :caption: Contents:
+
+   **module1**
+   **module2**
+   
+...
+```
+
+Make following changes in the ./source/conf.py file:
+
+```bash
+import os
+import sys
+# sys.path.insert(0, os.path.abspath('.'))
+print(os.path.abspath('../'))
+sys.path.insert(0, os.path.abspath('../'))
+
+...
+
+extensions = ['sphinx.ext.todo', 'sphinx.ext.viewcode', 'sphinx.ext.autodoc']
+
+...
+```
+
+To build a html documentation, run following command in the project's root directory:
+```bash
+make html
+```
+
+To see the result, open ./build/html/index.html in your browser.
