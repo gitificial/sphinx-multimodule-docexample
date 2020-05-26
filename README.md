@@ -39,8 +39,8 @@ To include the modules in the build process add the rst-filenames to the master 
    :maxdepth: 2
    :caption: Contents:
 
-    <b>module1</b>
-   __module2__
+   <b>module1</b>
+   <b>module2</b>
    
 ...
 </pre></code>
