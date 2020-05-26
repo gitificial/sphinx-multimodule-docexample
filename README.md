@@ -32,7 +32,7 @@ mv ./module2/module2.rst ./source
 
 To include the modules in the build process add the rst-filenames to the master document index.rst:
 
-```bash
+<pre><code>
 ...
 
 .. toctree::
@@ -43,7 +43,7 @@ To include the modules in the build process add the rst-filenames to the master 
    __module2__
    
 ...
-```
+</pre></code>
 
 Make following changes in the ./source/conf.py file:
 
